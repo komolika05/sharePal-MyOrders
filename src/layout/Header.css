@@ -9,6 +9,7 @@ header {
     height: 136px;
     background-color: #fff;
     box-shadow: 0 0px 8px rgba(212, 212, 212, 0.4);
+    z-index: 100;
   }
   
   .logo {

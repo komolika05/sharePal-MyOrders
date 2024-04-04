@@ -24,9 +24,11 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 600;
   }
   
   .raise-ticket-btn:hover {
     background-color: #0056b3;
+    font-weight: 600;
   }
   

@@ -74,9 +74,7 @@ const Header = () => {
         </div>
       </nav>
       <div className="orderButton-container">
-        <button className="order-button">
-          My orders
-        </button>
+        <button className="order-button">Cart</button>
       </div>
     </header>
   );
