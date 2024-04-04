@@ -6,7 +6,7 @@ const OrderItem = ({ order }) => {
     <div className="order-item">
       <div className="order-details">
         <h3>{order.product}</h3>
-        <p>{order.stage}</p>
+        <p className="stage">• {order.stage}</p>
       </div>
     </div>
   );

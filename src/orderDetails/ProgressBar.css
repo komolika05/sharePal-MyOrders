@@ -1,0 +1,92 @@
+
+
+ul li {
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li .icons {
+  font-size: 25px;
+  color: #1b761b;
+  margin: 0 60px;
+}
+
+.label {
+  position: absolute;
+  top: 24px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #d7d7c3;
+}
+
+.label .active {
+  color:#1b761b;
+}
+
+.step-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #d7d7c3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ghostwhite;
+  position: relative;
+}
+
+
+ul li .step .awesome {
+  display: none;
+}
+
+ul li .step p {
+  font-size: 18px;
+}
+
+.active-circle {
+  background-color: #1b761b;
+}
+
+.active-label {
+  color: #1b761b;
+}
+
+ul li .active p {
+  display: none;
+}
+
+ul li .active .awesome {
+  display: flex;
+}
+
+.active-number {
+  color: white
+}
+
+.stepper-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Set your desired thickness */
+  background-color: #d7d7c3; /* Set your desired line color */
+  transform: translateY(-50%);
+  z-index: -1;
+}

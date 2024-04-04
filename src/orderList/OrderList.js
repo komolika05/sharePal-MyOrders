@@ -1,4 +1,3 @@
-// OrderList.js
 import React, { useState } from "react";
 import OrderItem from "./../orderItem/OrderItem";
 import OrderDetails from "./../orderDetails/OrderDetails";
@@ -17,16 +16,17 @@ const OrderList = () => {
       <h2 className="myOrder">My Orders</h2>
       <div className="list">
         {mockOrders.map((order) => (
-          <div
-            key={order.order_id}
-            className="order-list"
-            onClick={() => handleOrderClick(order)}
-          >
-            <OrderItem order={order} />
+          <div key={order.order_id} className="order-list">
+            {selectedOrder === order ? (
+              <OrderDetails order={order} />
+            ) : (
+              <div onClick={() => handleOrderClick(order)}>
+                <OrderItem order={order} />
+              </div>
+            )}
           </div>
         ))}
       </div>
-      {selectedOrder && <OrderDetails order={selectedOrder} />}
     </div>
   );
 };

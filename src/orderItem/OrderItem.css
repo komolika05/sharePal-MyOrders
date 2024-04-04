@@ -20,7 +20,7 @@
   .order-details {
     margin-bottom: 5px;
     
-    p{
+    .stage{
         color: green;
         font-weight: 600;
     }

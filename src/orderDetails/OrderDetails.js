@@ -1,24 +1,60 @@
-// OrderDetails.js
-import React from "react";
+import React, { useState } from "react";
 import "./OrderDetails.css";
-import OrderItem from "../orderItem/OrderItem";
+import ProgressBar from "./ProgressBar";
 
 const OrderDetails = ({ order }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [subject, setSubject] = useState("");
+
+  const handleRaiseTicket = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmit = () => {
+    alert(`Issue raised with subject: ${subject}`);
+    setIsModalOpen(false);
+  };
   return (
     <div className="order-details-container">
       <h2>Order Details</h2>
       <div className="order-info">
-        <h3>Order ID: {order.order_id}</h3>
-        <p>Order Date: {order.order_date}</p>
-        <p>Delivery Date: {order.delivery_date}</p>
+        <p>Order ID: {order.order_id}</p>
+        <p>Rental Date: {order.rental_start_date}</p>
+        <p>Rental End Date: {order.rental_end_date}</p>
         <p>Total Order Amount: {order.total_order_amount}</p>
-        <p>Stage: {order.stage}</p>
       </div>
       <div className="order-items">
-        <h3>Items:</h3>
-        <OrderItem order={order} />
+        <h3>Stage:</h3>
+        <ProgressBar stepName={order.stage}/>
       </div>
-      <button className="raise-ticket-btn">Raise Ticket</button>
+      <button className="raise-ticket-btn" onClick={handleRaiseTicket}>
+        Raise Ticket
+      </button>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseModal}>
+              &times;
+            </span>
+            <h2>Raise Ticket</h2>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Subject:
+                <input
+                  type="text"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
