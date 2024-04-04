@@ -1,3 +1,4 @@
+// OrderDetails.js
 import React from "react";
 import "./OrderDetails.css";
 import OrderItem from "../orderItem/OrderItem";
@@ -15,7 +16,7 @@ const OrderDetails = ({ order }) => {
       </div>
       <div className="order-items">
         <h3>Items:</h3>
-        <OrderItem />
+        <OrderItem order={order} />
       </div>
       <button className="raise-ticket-btn">Raise Ticket</button>
     </div>
