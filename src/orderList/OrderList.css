@@ -1,0 +1,14 @@
+.order-list-container {
+    margin: 20px;
+  }
+  
+  .order-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .order-item h3 {
+    margin-top: 0;
+  }
+  
