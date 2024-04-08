@@ -32,6 +32,18 @@ header {
     .order-button{
       width: 60px !important;
     }
+    .orderButton-container{
+      padding: 12px !important;
+    }
+    .suggestion.active{
+      margin-top: 0px !important;
+    }
+  }
+
+  @media only screen and (max-width : 400px){
+    .suggestion.active{
+      transform: translateX(-25%) !important;
+    }
   }
 
   nav {

@@ -8,6 +8,12 @@
   .order-info {
     margin-bottom: 20px;
   }
+
+  @media only screen and (max-width: 48em){
+    .order-info{
+      font-size: 12px;
+    }
+  }
   
   .order-info h3 {
     margin-top: 0;

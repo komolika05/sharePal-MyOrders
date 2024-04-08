@@ -80,6 +80,22 @@ ul li .active .awesome {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 48em){
+  .label{
+    font-size: 9px;
+    writing-mode: vertical-rl;
+  }
+  .stepper-container{
+    width: 95%;
+    margin-bottom: 78px;
+  }
+  .step-circle{
+    height: 16px;
+    width: 16px;
+    font-size: 10px;
+  }
+}
+
 .horizontal-line {
   position: absolute;
   top: 50%;
