@@ -24,7 +24,7 @@ header {
     width: 200px;
   }
   
-  @media only screen and (max-width: 40em){
+  @media only screen and (max-width: 48em){
     .logo{
       width: 100px;
       padding-left: 10px;
@@ -246,6 +246,10 @@ header {
       background: none;
       background-color: lightgrey;
       padding: 1.2rem 1rem 1.2rem 1rem;
+    }
+    .search__input:focus{
+      background: none;
+      background-color: lightgray;
     }
     .search__btn {
       display: none !important;

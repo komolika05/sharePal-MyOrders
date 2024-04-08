@@ -1,5 +1,5 @@
 .order-list-container {
-    margin-top: 12%;
+    margin-top: 112.8px;
     margin-right: 6%;
     margin-left: 6%;
 
@@ -8,6 +8,7 @@
         font-size: 36px;
         font-size: 700;
         text-align: center;
+        padding-top: 16px;
     }
     }
   
