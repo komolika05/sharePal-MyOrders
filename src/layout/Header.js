@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./Header.css";
 import SharePalLogo from "./../images/Swnac-Ekiraya-Services-Pvt-Ltd-Sharepal-1.png";
-import OrderList from "../orderList/OrderList";
 
 const Header = () => {
   useEffect(() => {
@@ -33,9 +32,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo">
-        <img src={SharePalLogo} className="logo" />
-      </div>
+      <img src={SharePalLogo} className="logo" />
       <nav>
         <div className="search-bar">
           <form className="search">
